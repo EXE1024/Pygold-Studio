@@ -102,7 +102,7 @@ def load_file(filepath):
             process = load_in_3d(data)
             for body in bodies:
                 destroy(body)
-                bodies.clear()
+            bodies.clear()
             upc(process)
     except:
         messagebox.showerror("Load",f"{filepath} does not exist or cannot be processed")
@@ -118,8 +118,7 @@ def upc(execute):
             new = Entity(model='cube', color=color.hex(command[1]), position=position, scale=scale, texture=command[9], collider='box', name=command[8])
 
             bodies.append(new)
-            return new
-    
+            
 gravity = -0.8
 bounce = 0.9
 def update():
