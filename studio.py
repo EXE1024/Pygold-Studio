@@ -611,7 +611,6 @@ def upc(execute):
             new = Entity(model='cube', color=color.hex(command[1]), position=position, scale=scale, texture=command[9], collider='box', name=command[8])
 
             bodies.append(new)
-            return new
     
 gravity = -0.8
 bounce = 0.9
